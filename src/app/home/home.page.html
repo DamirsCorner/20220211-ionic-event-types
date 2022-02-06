@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,8 +11,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-label>CustomEvent</ion-label>
+    <ion-input (ionChange)="onInputChangeCustom($event)"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Any</ion-label>
+    <ion-input (ionChange)="onInputChangeAny($event)"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Event</ion-label>
+    <ion-input (ionChange)="onInputChangeEvent($event)"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>as CustomEvent</ion-label>
+    <ion-input
+      (ionChange)="onInputChangeCustom(asInputCustomEvent($event))"
+    ></ion-input>
+  </ion-item>
 </ion-content>
